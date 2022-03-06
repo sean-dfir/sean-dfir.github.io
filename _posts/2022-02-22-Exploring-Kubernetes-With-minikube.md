@@ -79,7 +79,7 @@ or by adding the following alias to your `.bashrc` or `.zshrc` file:
 alias kubectl="minikube kubectl --"
 ```
 
-If you've done either of the above, you should be able to now run the command `kubectl get pods --all-namespaces`  and get similar results to earlier; the main difference should be the age of the pods.
+If you've done either of the above, you should be able to now run the command `kubectl get pods --all-namespaces` and get similar results to earlier; the main difference should be the age of the pods.
 
 ```
 NAMESPACE     NAME                               READY   STATUS    RESTARTS      AGE
@@ -117,5 +117,14 @@ Where `command`, `TYPE`, `NAME`, and `flags` are:
 * `flags`: Specifies optional flags. 
 
 The [kubectl reference](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) page and the [Kubernetes Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) are great resources for understanding `kubectl` and its use-cases. 
+
+The output of the `kubectl get pods --all-namespaces` command detailed above outputs the following fields:
+* `Namespace` - name of the [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) the pod belongs to.
+* `Name` - name of the pod, which can end with a randomized string.
+* `Ready` - how many of the expected pods are available to serve requests.
+* `Status` - which phase of the pod [lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/) the pod is in. 
+* `Restarts` -  how many times a pod has [restarted](https://dwdraju.medium.com/a-pod-restarts-so-whats-going-on-fa12bb8a57ea) since its creation.
+* `Age` - the age of the pod. 
+
 
 
