@@ -126,5 +126,24 @@ The output of the `kubectl get pods --all-namespaces` command detailed above out
 * `Restarts` -  how many times a pod has [restarted](https://dwdraju.medium.com/a-pod-restarts-so-whats-going-on-fa12bb8a57ea) since its creation.
 * `Age` - the age of the pod. 
 
+#### Namespaces
 
+Namespaces are a mechanism for isolation groups of resources within a single Kubernetes cluster; namespaces are a Kubernetes primitives used to divide a cluster into multiple virtual clusters to support multi-tenancy.
 
+You can list the current namespaces in a cluster using the `kubectl get namespace` command.
+
+```
+kubectl get namespaces
+
+NAME              STATUS   AGE
+default           Active   24h
+kube-node-lease   Active   24h
+kube-public       Active   24h
+kube-system       Active   24h
+```
+
+As you can see above, a new cluster contains the following namespaces:
+* `kube-system` - Reserved for the Kubernetes engine and objects created by the Kubernetes system. 
+* `kube-public` - The contents of `kube-public` are readable by all users on the cluster, including unauthenticated users. The namespace is generally reserved for cluster usage.
+* `kube-node-lease`  -This namespace holds Lease objects associated with each node. Node leases allow the kubelet to send heartbeats so that the control plane can detect node failure.
+* `default` - The default namespace all resources are created in if a namespace isn't specified. 
