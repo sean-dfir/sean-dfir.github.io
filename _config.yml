@@ -8,19 +8,19 @@ description: "Notes on threat detection, DFIR, and security engineering." # This
 # twitter_username: "twitteruser"
 # github_username: "githubuser"
 # linkedin_username: "linkedinuser"
-#facebook_username: username
-#flickr_username: username
-#instagram_username: username
-#pinterest_username: username
-#youtube_username: username
-#googleplus_username: +username
+# facebook_username: username
+# flickr_username: username
+# instagram_username: username
+# pinterest_username: username
+# youtube_username: username
+# googleplus_username: +username
 
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
 theme: "minima"
 
-rss: rss
+# rss: rss
 
 kramdown:
   syntax_highlighter_opts:
